@@ -1,8 +1,6 @@
-package jpa.board.service;
+package jpa.board.user;
 
-import jpa.board.domain.User;
-
-import java.util.List;
+import jpa.board.user.User;
 
 public interface UserService {
     Long join(String email, String password, String nickname, Integer question, String answer);

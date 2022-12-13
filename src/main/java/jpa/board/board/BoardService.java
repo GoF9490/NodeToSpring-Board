@@ -1,7 +1,6 @@
-package jpa.board.service;
+package jpa.board.board;
 
-import jpa.board.domain.Board;
-import org.springframework.transaction.annotation.Transactional;
+import jpa.board.board.Board;
 
 import java.util.List;
 

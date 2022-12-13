@@ -1,4 +1,4 @@
-package jpa.board.controller.form;
+package jpa.board.user;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package jpa.board.repository;
+package jpa.board.user;
 
-import jpa.board.domain.User;
+import jpa.board.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

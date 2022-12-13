@@ -1,4 +1,4 @@
-package jpa.board.domain;
+package jpa.board.user;
 
 import lombok.AccessLevel;
 import lombok.Getter;

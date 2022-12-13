@@ -1,9 +1,7 @@
-package jpa.board.service;
+package jpa.board.board;
 
-import jpa.board.domain.Board;
-import jpa.board.domain.User;
-import jpa.board.repository.BoardRepository;
-import jpa.board.repository.UserRepository;
+import jpa.board.user.User;
+import jpa.board.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

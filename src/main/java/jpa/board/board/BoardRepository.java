@@ -1,6 +1,6 @@
-package jpa.board.repository;
+package jpa.board.board;
 
-import jpa.board.domain.Board;
+import jpa.board.board.Board;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

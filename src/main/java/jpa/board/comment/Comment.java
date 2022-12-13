@@ -1,6 +1,7 @@
-package jpa.board.domain;
+package jpa.board.comment;
 
-import jpa.board.controller.form.CommentForm;
+import jpa.board.board.Board;
+import jpa.board.user.User;
 import lombok.Getter;
 import lombok.Setter;
 

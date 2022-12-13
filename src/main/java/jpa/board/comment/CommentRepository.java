@@ -1,6 +1,6 @@
-package jpa.board.repository;
+package jpa.board.comment;
 
-import jpa.board.domain.Comment;
+import jpa.board.comment.Comment;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
