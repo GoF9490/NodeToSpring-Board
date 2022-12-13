@@ -27,12 +27,12 @@ public class UserController {
             @RequestBody @Valid UserForm userForm) {
 
         try {
-            User user = new User(userForm.getEmail(),
+            Long newUserId = userService.join(
+                    userForm.getEmail(),
                     userForm.getPassword(),
                     userForm.getNickname(),
                     userForm.getQuestion(),
                     userForm.getAnswer());
-            Long newUserId = userService.join(user);
             URI uri = URI.create("/user/" + newUserId);
             return ResponseEntity.created(uri).build();
         }

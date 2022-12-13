@@ -43,12 +43,14 @@ public class User {
     protected User() {
     }
 
-    public User(String email, String password, String nickname, Integer question, String answer) {
-        this.email = email;
-        this.password = password;
-        this.nickname = nickname;
-        this.question = question;
-        this.answer = answer;
-        this.createdDate = LocalDateTime.now();
+    public static User createUser(String email, String password, String nickname, Integer question, String answer) {
+        User user = new User();
+        user.email = email;
+        user.password = password;
+        user.nickname = nickname;
+        user.question = question;
+        user.answer = answer;
+        user.createdDate = LocalDateTime.now();
+        return user;
     }
 }

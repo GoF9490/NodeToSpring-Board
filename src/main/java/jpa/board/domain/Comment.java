@@ -33,11 +33,13 @@ public class Comment {
     protected Comment() {
     }
 
-    public Comment(User user, Board board, String content) {
-        this.user = user;
-        this.board = board;
-        this.content = content;
-        this.createdDate = LocalDateTime.now();
+    public static Comment createComment(User user, Board board, String content) {
+        Comment comment = new Comment();
+        comment.user = user;
+        comment.board = board;
+        comment.content = content;
+        comment.createdDate = LocalDateTime.now();
+        return comment;
     }
 
     public CommentForm toCommentForm() {

@@ -24,6 +24,7 @@ public class Board {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+    @Setter(AccessLevel.NONE)
     private User user;
 
     private String title;
@@ -39,11 +40,13 @@ public class Board {
 
     protected Board() {}
 
-    public Board(User user, String title, String content) {
-        this.user = user;
-        this.title = title;
-        this.content = content;
-        this.createdDate = LocalDateTime.now();
+    public static Board createBoard(User user, String title, String content) {
+        Board board = new Board();
+        board.user = user;
+        board.title = title;
+        board.content = content;
+        board.createdDate = LocalDateTime.now();
+        return board;
     }
 
     public BoardForm toBoardForm(boolean needComment) {

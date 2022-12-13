@@ -20,22 +20,15 @@ public class BoardController {
     private final BoardService boardService;
 
     @PostMapping("/board/new")
-    public ResponseEntity<Object> newBoard(
-            @RequestBody @Valid BoardForm boardForm) {
+    public ResponseEntity<Object> newBoard(@RequestBody @Valid BoardForm boardForm) {
 
-        Board board = new Board(
-                null,
-                boardForm.getTitle(),
-                boardForm.getContent());
-
-        Long boardId = boardService.create(board, boardForm.getUserId());
+        Long boardId = boardService.create(boardForm.getUserId(), boardForm.getTitle(), boardForm.getContent());
         URI uri = URI.create("/board/" + boardId);
         return ResponseEntity.created(uri).build();
     }
 
     @GetMapping("/board/{boardId}")
-    public BoardForm getBoard(
-            @PathVariable("boardId") String pathVariable) {
+    public BoardForm getBoard(@PathVariable("boardId") String pathVariable) {
 
         Long boardId = Long.parseLong(pathVariable);
         return boardService.findOne(boardId).toBoardForm(true);

@@ -16,7 +16,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Transactional
-    public Long join(User user) {
+    public Long join(String email, String password, String nickname, Integer question, String answer) {
+        User user = User.createUser(email, password, nickname, question, answer);
         validateDuplicateUser(user);
         userRepository.save(user);
         return user.getId();

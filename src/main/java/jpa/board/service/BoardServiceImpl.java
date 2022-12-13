@@ -19,11 +19,11 @@ public class BoardServiceImpl implements BoardService {
     private final UserRepository userRepository;
 
     @Transactional
-    public Long create(Board board, Long userId) {
+    public Long create(Long userId, String title, String content) {
         User user = userRepository.findOne(userId);
-        board.setUser(user);
+        Board board = Board.createBoard(user, title, content);
         boardRepository.save(board);
-        return  board.getId();
+        return board.getId();
     }
 
     public Board findOne(Long id) {

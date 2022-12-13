@@ -22,7 +22,7 @@ public class CommentServiceImpl implements CommentService {
     public Long create(String content, Long userId, Long boardId) {
         User user = userRepository.findOne(userId);
         Board board = boardRepository.findOne(boardId);
-        Comment comment = new Comment(user, board, content);
+        Comment comment = Comment.createComment(user, board, content);
         commentRepository.save(comment);
         return comment.getId();
     }

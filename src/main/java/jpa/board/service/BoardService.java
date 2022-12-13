@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface BoardService {
-    Long create(Board board, Long userId);
+    Long create(Long userId, String title, String content);
     Board findOne(Long id);
     List<Board> getListFromPage(int page);
     Long update();
