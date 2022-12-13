@@ -3,6 +3,7 @@ package jpa.board.controller;
 import jpa.board.controller.form.UserForm;
 import jpa.board.domain.User;
 import jpa.board.service.UserService;
+import jpa.board.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

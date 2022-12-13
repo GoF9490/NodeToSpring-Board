@@ -3,6 +3,7 @@ package jpa.board.controller;
 import jpa.board.controller.form.BoardForm;
 import jpa.board.domain.Board;
 import jpa.board.service.BoardService;
+import jpa.board.service.BoardServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

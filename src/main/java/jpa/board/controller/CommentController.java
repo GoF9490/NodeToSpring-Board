@@ -2,6 +2,7 @@ package jpa.board.controller;
 
 import jpa.board.controller.form.CommentForm;
 import jpa.board.service.CommentService;
+import jpa.board.service.CommentServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
